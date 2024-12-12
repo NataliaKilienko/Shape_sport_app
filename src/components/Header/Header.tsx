@@ -74,6 +74,27 @@ const Header: React.FC = () => {
           >
             Favorites
           </Button>
+          <Button
+            component={Link}
+            to="/workout-planner"
+            sx={{
+              color: '#FFFFFF',
+              fontWeight: 'bold',
+              transition: 'color 0.3s ease, transform 0.3s ease',
+              backgroundColor: 'transparent',
+              '&:hover': {
+                color: '#FFA500',
+                transform: 'scale(1.1)',
+                textShadow: '2px 2px 8px rgba(255, 140, 0, 0.8)',
+              },
+              '&:focus, &:active': {
+                outline: 'none',
+                boxShadow: 'none',
+              },
+            }}
+          >
+            Workout Planner
+          </Button>
         </Box>
       </Toolbar>
     </AppBar>

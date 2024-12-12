@@ -20,3 +20,9 @@ export interface SearchBarProps {
 export interface FavoritesState {
     items: Exercise[];
   }
+
+export interface WorkoutList {
+    id: number;
+    name: string;
+    exercises: Exercise[];
+  }  
