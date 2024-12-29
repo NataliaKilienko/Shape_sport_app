@@ -24,7 +24,8 @@ const ExerciseCard: React.FC<ExerciseCardProps> = ({ id, name, target, gifUrl })
     <Card
       sx={{
         width: '100%',
-        height: '400px',
+        maxWidth: '320px', 
+        height: '420px', 
         borderRadius: '16px',
         overflow: 'hidden',
         backgroundColor: 'rgba(46, 46, 46, 0.95)',
@@ -36,39 +37,42 @@ const ExerciseCard: React.FC<ExerciseCardProps> = ({ id, name, target, gifUrl })
           transform: 'translateY(-10px)',
           boxShadow: '0 8px 30px rgba(0, 0, 0, 0.4)',
         },
+        display: 'flex',
+        flexDirection: 'column', 
       }}
     >
-  <Link to={`/exercise/${id}`} style={{ textDecoration: 'none', color: 'inherit' }}>
-      <CardMedia
-        component="img"
-        image={gifUrl}
-        alt={name}
-        sx={{
-          height: '200px',
-          objectFit: 'cover',
-          filter: 'brightness(0.85)',
-          transition: 'filter 0.3s ease',
-          '&:hover': {
-            filter: 'brightness(1)',
-          },
-        }}
-      />
-      <CardContent
-        sx={{
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'center',
-          alignItems: 'center',
-          height: '120px',
-        }}
-      >
-        <Typography variant="h6" component="div" sx={{ fontWeight: 'bold', color: '#ffcc00' }}>
-          {name}
-        </Typography>
-        <Typography variant="body2" color="text.secondary" sx={{ color: '#ffcc80' }}>
-          Target Muscle: {target}
-        </Typography>
-      </CardContent>
+      <Link to={`/exercise/${id}`} style={{ textDecoration: 'none', color: 'inherit' }}>
+        <CardMedia
+          component="img"
+          image={gifUrl}
+          alt={name}
+          sx={{
+            flex: '1 0 auto',
+            maxHeight: '200px', 
+            objectFit: 'cover', 
+            filter: 'brightness(0.85)',
+            transition: 'filter 0.3s ease',
+            '&:hover': {
+              filter: 'brightness(1)',
+            },
+          }}
+        />
+        <CardContent
+          sx={{
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            alignItems: 'center',
+            height: '120px',
+          }}
+        >
+          <Typography variant="h6" component="div" sx={{ fontWeight: 'bold', color: '#ffcc00' }}>
+            {name}
+          </Typography>
+          <Typography variant="body2" color="text.secondary" sx={{ color: '#ffcc80' }}>
+            Target Muscle: {target}
+          </Typography>
+        </CardContent>
       </Link>
       <Box
         sx={{

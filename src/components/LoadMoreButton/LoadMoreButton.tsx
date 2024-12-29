@@ -1,9 +1,6 @@
 import React from 'react';
 import { Box, Button } from '@mui/material';
-
-interface LoadMoreButtonProps {
-  onClick: () => void;
-}
+import { LoadMoreButtonProps } from '../../types/types'
 
 const LoadMoreButton: React.FC<LoadMoreButtonProps> = ({ onClick }) => {
   return (

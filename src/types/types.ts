@@ -35,3 +35,22 @@ export interface YouTubeVideo {
         default?: { url: string };
     };
 }
+
+export interface ExerciseGridProps {
+  exercises: Exercise[];
+}
+
+export interface LoadMoreButtonProps {
+  onClick: () => void;
+}
+
+export interface ExerciseListProps {
+  exercises: Exercise[];
+  onRemove: (exerciseId: string) => void;
+}
+
+export interface WorkoutListSelectorProps {
+  workoutLists: WorkoutList[];
+  currentListId: number | null;
+  setCurrentListId: (id: number) => void;
+}

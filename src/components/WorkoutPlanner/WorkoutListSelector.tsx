@@ -1,12 +1,6 @@
 import React from 'react';
 import { FormControl, InputLabel, Select, MenuItem } from '@mui/material';
-import { WorkoutList } from '../../types/types';
-
-interface WorkoutListSelectorProps {
-  workoutLists: WorkoutList[];
-  currentListId: number | null;
-  setCurrentListId: (id: number) => void;
-}
+import { WorkoutListSelectorProps } from '../../types/types';
 
 const WorkoutListSelector: React.FC<WorkoutListSelectorProps> = ({ workoutLists, currentListId, setCurrentListId }) => (
   <FormControl fullWidth sx={{ marginBottom: '20px' }}>
