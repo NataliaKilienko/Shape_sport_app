@@ -1,7 +1,14 @@
 import React from 'react';
 import { Box, Typography, Button } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
 
 const BottomBar: React.FC = () => {
+  const navigate = useNavigate();
+
+  const handleGoToContacts = () => {
+    navigate('/contact'); 
+  };
+
   return (
     <Box
       sx={{
@@ -36,11 +43,12 @@ const BottomBar: React.FC = () => {
           },
         }}
       >
-        Ready to transform your fitness journey? Join us and become the strongest version of yourself.
+        Got questions or need assistance? Contact us today and let us help you achieve your fitness goals.
       </Typography>
       <Button
         variant="outlined"
         color="warning"
+        onClick={handleGoToContacts}
         sx={{
           color: 'white',
           borderColor: '#FFA500',
@@ -62,7 +70,7 @@ const BottomBar: React.FC = () => {
           },
         }}
       >
-        LEARN MORE
+        CONTACT US
       </Button>
     </Box>
   );

@@ -2,6 +2,13 @@ import React from 'react';
 import { Box, Typography, Button } from '@mui/material';
 
 const HeroContent: React.FC = () => {
+  const handleGetStarted = () => {
+    const exerciseList = document.getElementById('exercise-list'); 
+    if (exerciseList) {
+      exerciseList.scrollIntoView({ behavior: 'smooth' }); 
+    }
+  };
+
   return (
     <Box
       sx={{
@@ -50,6 +57,7 @@ const HeroContent: React.FC = () => {
       </Typography>
       <Button
         variant="contained"
+        onClick={handleGetStarted} 
         sx={{
           position: 'relative',
           color: '#FFFFFF',

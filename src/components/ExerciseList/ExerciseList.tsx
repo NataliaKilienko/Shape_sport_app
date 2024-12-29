@@ -18,7 +18,7 @@ const ExerciseList: React.FC = () => {
   };
 
   return (
-    <Container sx={{ paddingY: '40px', minHeight: '100vh', color: '#fff' }}>
+    <Container id="exercise-list" sx={{ paddingY: '40px', minHeight: '100vh', color: '#fff' }}>
       <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
       <FormControl fullWidth sx={{ marginTop: '20px', marginBottom: '20px' }}>
         <InputLabel
