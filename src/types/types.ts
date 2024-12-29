@@ -26,3 +26,12 @@ export interface WorkoutList {
     name: string;
     exercises: Exercise[];
   }  
+
+export interface YouTubeVideo {
+    videoId: string;
+    title: string;
+    thumbnails: {
+        medium?: { url: string };
+        default?: { url: string };
+    };
+}

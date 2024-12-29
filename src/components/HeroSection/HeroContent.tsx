@@ -50,16 +50,17 @@ const HeroContent: React.FC = () => {
       </Typography>
       <Button
         variant="contained"
-        color="warning"
         sx={{
-          color: 'white',
+          position: 'relative',
+          color: '#FFFFFF',
           fontWeight: 'bold',
           padding: '15px 35px',
           fontSize: '1.2rem',
-          textShadow: '2px 2px 10px rgba(0, 0, 0, 0.9)',
           borderRadius: '30px',
           backgroundColor: '#FFA500',
-          boxShadow: '0 4px 20px rgba(255, 140, 0, 0.5)',
+          textShadow: '2px 2px 10px rgba(0, 0, 0, 0.9)',
+          boxShadow: '0 6px 15px rgba(255, 140, 0, 0.5)',
+          overflow: 'hidden',
           transition: 'transform 0.3s ease, background-color 0.3s ease',
           animation: 'pulse 3s infinite',
           '@keyframes pulse': {
@@ -70,15 +71,38 @@ const HeroContent: React.FC = () => {
           '&:hover': {
             backgroundColor: '#FF8C00',
             transform: 'scale(1.1)',
-            boxShadow: '0 6px 30px rgba(255, 140, 0, 0.7)',
+            boxShadow: '0 8px 30px rgba(255, 140, 0, 0.7)',
           },
           '&:active': {
             transform: 'scale(1.05)',
-            boxShadow: '0 2px 10px rgba(255, 140, 0, 0.4)',
+            boxShadow: '0 4px 20px rgba(255, 140, 0, 0.4)',
+          },
+          '&:before': {
+            content: '""',
+            position: 'absolute',
+            top: 0,
+            left: '-100%',
+            width: '100%',
+            height: '100%',
+            background: 'linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent)',
+            zIndex: 1,
+            transition: 'all 0.5s ease-in-out',
+          },
+          '&:hover:before': {
+            left: '100%',
           },
         }}
       >
-        GET STARTED
+        <Typography
+          component="span"
+          sx={{
+            position: 'relative',
+            zIndex: 2,
+            fontWeight: 'bold',
+          }}
+        >
+          GET STARTED
+        </Typography>
       </Button>
     </Box>
   );

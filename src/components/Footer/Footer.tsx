@@ -1,12 +1,12 @@
 import React from 'react';
-import { Box, Typography, Link, IconButton, Grid } from '@mui/material';
+import { Box, Typography, IconButton, Grid } from '@mui/material';
 import { Facebook, Instagram, Twitter, YouTube } from '@mui/icons-material';
 
 const Footer: React.FC = () => {
   return (
     <Box
       sx={{
-        backgroundColor: '#0D0D0D',
+        background: 'linear-gradient(180deg, #1c1c1c, #0d0d0d)',
         color: '#FFFFFF',
         padding: '60px 20px',
         mt: 'auto',
@@ -14,7 +14,11 @@ const Footer: React.FC = () => {
         position: 'relative',
         width: '100%',
         boxShadow: '0px -5px 15px rgba(0, 0, 0, 0.7)',
-        borderTop: '2px solid #FFA500',
+        borderTop: '3px solid #FFA500',
+        transition: 'background 0.5s',
+        '&:hover': {
+          background: 'linear-gradient(180deg, #292929, #121212)',
+        },
       }}
     >
       <Grid
@@ -30,7 +34,7 @@ const Footer: React.FC = () => {
           },
         }}
       >
-        <Grid item xs={12} sm={4} sx={{ mb: 3 }}>
+        <Grid item xs={12} sm={4}>
           <Typography variant="h5" sx={{ fontWeight: 'bold', mb: 2, color: '#FFA500' }}>
             About SHAPE
           </Typography>
@@ -40,44 +44,67 @@ const Footer: React.FC = () => {
             your fitness journey with us.
           </Typography>
         </Grid>
-
-        <Grid item xs={12} sm={3} sx={{ mb: 3 }}>
+        <Grid item xs={12} sm={3}>
           <Typography variant="h6" sx={{ fontWeight: 'bold', mb: 2, color: '#FFA500', fontFamily: 'Roboto, sans-serif' }}>
-            Quick Links
+            Contact Info
           </Typography>
-          <Link href="/" color="inherit" underline="none" sx={{ display: 'block', mb: 1, transition: 'color 0.3s', '&:hover': { color: '#FFA500' }, fontFamily: 'Roboto, sans-serif' }}>
-            Home
-          </Link>
-          <Link href="/favorites" color="inherit" underline="none" sx={{ display: 'block', mb: 1, transition: 'color 0.3s', '&:hover': { color: '#FFA500' }, fontFamily: 'Roboto, sans-serif' }}>
-            Favorites
-          </Link>
-          <Link href="/contact" color="inherit" underline="none" sx={{ display: 'block', mb: 1, transition: 'color 0.3s', '&:hover': { color: '#FFA500' }, fontFamily: 'Roboto, sans-serif' }}>
-            Contact Us
-          </Link>
+          {[
+            { label: 'Email', value: 'support@shape.com' },
+            { label: 'Phone', value: '+123-456-7890' },
+            { label: 'Address', value: '123 Shape Street, Fitness City, SH 45678' },
+          ].map((info, index) => (
+            <Typography
+              key={index}
+              variant="body2"
+              sx={{
+                fontFamily: 'Roboto, sans-serif',
+                color: '#AAAAAA',
+                mb: 1,
+                cursor: 'pointer',
+                transition: 'color 0.3s',
+                '&:hover': { color: '#FFFFFF' },
+              }}
+            >
+              <strong>{info.label}:</strong> {info.value}
+            </Typography>
+          ))}
         </Grid>
-
-        <Grid item xs={12} sm={3} sx={{ mb: 3 }}>
+        <Grid item xs={12} sm={3}>
           <Typography variant="h6" sx={{ fontWeight: 'bold', mb: 2, color: '#FFA500', fontFamily: 'Roboto, sans-serif' }}>
             Follow Us
           </Typography>
           <Box>
-            <IconButton href="https://facebook.com" target="_blank" sx={{ color: '#FFA500', mr: 1, transition: 'transform 0.3s', '&:hover': { transform: 'scale(1.15)', color: '#FFFFFF' } }}>
-              <Facebook />
-            </IconButton>
-            <IconButton href="https://instagram.com" target="_blank" sx={{ color: '#FFA500', mr: 1, transition: 'transform 0.3s', '&:hover': { transform: 'scale(1.15)', color: '#FFFFFF' } }}>
-              <Instagram />
-            </IconButton>
-            <IconButton href="https://twitter.com" target="_blank" sx={{ color: '#FFA500', mr: 1, transition: 'transform 0.3s', '&:hover': { transform: 'scale(1.15)', color: '#FFFFFF' } }}>
-              <Twitter />
-            </IconButton>
-            <IconButton href="https://youtube.com" target="_blank" sx={{ color: '#FFA500', transition: 'transform 0.3s', '&:hover': { transform: 'scale(1.15)', color: '#FFFFFF' } }}>
-              <YouTube />
-            </IconButton>
+            {[Facebook, Instagram, Twitter, YouTube].map((Icon, index) => (
+              <IconButton
+                key={index}
+                href="/"
+                target="_blank"
+                sx={{
+                  color: '#FFA500',
+                  mr: 1,
+                  transition: 'transform 0.3s, color 0.3s',
+                  '&:hover': { transform: 'scale(1.2)', color: '#FFFFFF', boxShadow: '0px 0px 10px #FFA500' },
+                }}
+              >
+                <Icon />
+              </IconButton>
+            ))}
           </Box>
         </Grid>
       </Grid>
 
-      <Typography variant="body2" sx={{ mt: 4, fontStyle: 'italic', color: '#AAAAAA', fontFamily: 'Roboto, sans-serif' }}>
+      <Typography
+        variant="body2"
+        sx={{
+          mt: 4,
+          fontStyle: 'italic',
+          cursor: 'pointer',
+          color: '#AAAAAA',
+          fontFamily: 'Roboto, sans-serif',
+          transition: 'color 0.3s',
+          '&:hover': { color: '#FFFFFF' },
+        }}
+      >
         © {new Date().getFullYear()} SHAPE. All rights reserved. Empower Your Body, Achieve Your Goals.
       </Typography>
     </Box>

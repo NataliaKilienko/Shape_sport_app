@@ -23,7 +23,7 @@ const WorkoutListSelector: React.FC<WorkoutListSelectorProps> = ({ workoutLists,
       onChange={(e) => setCurrentListId(Number(e.target.value))}
       label="Select a Workout List"
       sx={{
-        backgroundColor: '#2a2a3d',
+        backgroundColor: '#262626',
         color: '#ffcc80',
         '.MuiOutlinedInput-notchedOutline': { borderColor: '#ffcc80' },
         '&:hover .MuiOutlinedInput-notchedOutline': { borderColor: '#ff9800' },

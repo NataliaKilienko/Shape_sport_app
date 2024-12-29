@@ -4,6 +4,7 @@ import { ExerciseCardProps } from '../../types/types';
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '../../store/store';
 import { addToFavorites, removeFromFavorites } from '../../store/favoritesSlice';
+import { Link } from 'react-router-dom';
 
 const ExerciseCard: React.FC<ExerciseCardProps> = ({ id, name, target, gifUrl }) => {
   const dispatch = useDispatch();
@@ -37,6 +38,7 @@ const ExerciseCard: React.FC<ExerciseCardProps> = ({ id, name, target, gifUrl })
         },
       }}
     >
+  <Link to={`/exercise/${id}`} style={{ textDecoration: 'none', color: 'inherit' }}>
       <CardMedia
         component="img"
         image={gifUrl}
@@ -67,6 +69,7 @@ const ExerciseCard: React.FC<ExerciseCardProps> = ({ id, name, target, gifUrl })
           Target Muscle: {target}
         </Typography>
       </CardContent>
+      </Link>
       <Box
         sx={{
           position: 'absolute',
@@ -76,6 +79,7 @@ const ExerciseCard: React.FC<ExerciseCardProps> = ({ id, name, target, gifUrl })
           textAlign: 'center',
         }}
       >
+
         <Button
           variant="outlined"
           onClick={handleToggleFavorite}

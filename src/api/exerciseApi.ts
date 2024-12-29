@@ -47,3 +47,13 @@ export const fetchExercisesByCategory = async (category: string, limit: number =
     throw error;
   }
 };
+
+export const fetchExerciseById = async (id: string): Promise<Exercise> => {
+  try {
+    const response = await apiClient.get(`/exercises/exercise/${id}`);
+    return response.data;
+  } catch (error) {
+    console.error('Error fetching exercise by ID:', error);
+    throw error;
+  }
+};

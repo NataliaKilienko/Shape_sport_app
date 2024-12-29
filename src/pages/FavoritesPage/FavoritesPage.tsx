@@ -11,7 +11,15 @@ const FavoritesPage: React.FC = () => {
     <Container
       sx={{
         paddingY: '40px',
+        marginTop: '80px',
         minHeight: '100vh',
+        animation: 'fadeIn 1s ease-in-out',
+        '@keyframes fadeIn': {
+          '0%': { opacity: 0, transform: 'scale(0.9)' },
+          '100%': { opacity: 1, transform: 'scale(1)' },
+        },
+        color: '#FFFFFF',
+        padding: '20px',
       }}
     >
       <Typography
@@ -21,6 +29,7 @@ const FavoritesPage: React.FC = () => {
           marginBottom: '40px',
           fontWeight: 'bold',
           color: '#ffcc00',
+          textShadow: '2px 2px 8px rgba(0, 0, 0, 0.7)',
         }}
       >
         Favorite Exercises
@@ -32,6 +41,11 @@ const FavoritesPage: React.FC = () => {
             textAlign: 'center',
             marginTop: '40px',
             color: '#ffcc80',
+            animation: 'fadeInEmpty 1s ease-in-out',
+            '@keyframes fadeInEmpty': {
+              '0%': { opacity: 0 },
+              '100%': { opacity: 1 },
+            },
           }}
         >
           No favorite exercises yet. Start adding some!
@@ -52,7 +66,11 @@ const FavoritesPage: React.FC = () => {
               sx={{
                 flex: '1 1 calc(20% - 20px)',
                 maxWidth: 'calc(20% - 20px)',
-                minWidth: '300px',
+                minWidth: '250px',
+                transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+                '&:hover': {
+                  transform: 'scale(1.05)',
+                },
               }}
             >
               <ExerciseCard id={id} name={name} target={target} gifUrl={gifUrl} />
