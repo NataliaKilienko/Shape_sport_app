@@ -1,0 +1,68 @@
+# Dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# Production build directories
+/build
+/dist
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# IDE/Editor configuration files
+.vscode/
+.idea/
+*.iml
+*.sw?
+*.sublime-project
+*.sublime-workspace
+
+# System files
+.DS_Store              # macOS system file
+Thumbs.db              # Windows system file
+ehthumbs.db            # Windows thumbnail cache
+
+# Environment configuration files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Caches
+/.cache
+/.parcel-cache
+/.turbo
+/.next
+/webpack-stats.json
+/.eslintcache
+/.prettiercache
+
+# TypeScript build info
+*.tsbuildinfo
+
+# Temporary assets (images, videos, etc.)
+src/assets/tmp/
+*.tmp
+*.temp
+
+# Image and video files in the root directory
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.svg
+*.mp4
+*.webm
+
+# Confidential files and keys
+firebase.json
+firestore.indexes.json
+firestore.rules
+
+# macOS specific files
+*.DS_Store

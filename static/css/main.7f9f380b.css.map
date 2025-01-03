@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/main.7f9f380b.css","mappings":"AAAA,EACE,qBAAsB,CACtB,QAAS,CACT,SACF,CAEA,MAEE,WAAY,CADZ,UAEF,CAEA,KACE,wBACF","sources":["index.css"],"sourcesContent":["* {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n}\n\n#root {\n  width: 100%;\n  height: 100%;\n}\n\nbody {\n  background-color: rgb(31, 30, 30);\n}"],"names":[],"sourceRoot":""}
