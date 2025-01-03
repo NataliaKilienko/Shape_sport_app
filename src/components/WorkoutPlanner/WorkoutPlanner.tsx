@@ -138,10 +138,10 @@ const WorkoutPlanner: React.FC = () => {
                     </Button>
 
                     <Autocomplete
-                        options={Array.from(new Map(exercises.map((ex) => [ex.id, ex])).values())}
-                        getOptionLabel={(option) => option.name}
+                        options={exercises}
+                        getOptionLabel={(option: Exercise) => option.name}
                         value={selectedExercise}
-                        onChange={(_, newValue) => setSelectedExercise(newValue)}
+                        onChange={(_, newValue: Exercise | null) => setSelectedExercise(newValue)}
                         renderInput={(params) => (
                             <TextField
                                 {...params}
@@ -164,9 +164,13 @@ const WorkoutPlanner: React.FC = () => {
                                 }}
                             />
                         )}
-                        sx={{ marginBottom: '20px' }}
+                        isOptionEqualToValue={(option: Exercise, value: Exercise) => option.id === value.id}
+                        renderOption={(props, option: Exercise) => (
+                            <li {...props} key={option.id}>
+                                {option.name}
+                            </li>
+                        )}
                     />
-
                     <Button
                         variant="contained"
                         onClick={handleAddExercise}
