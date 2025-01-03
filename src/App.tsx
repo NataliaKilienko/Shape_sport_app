@@ -10,7 +10,7 @@ import ContactPage from './pages/ContactPage/ContactPage';
 
 const App: React.FC = () => {
   return (
-    <Router>
+    <Router basename="/Shape_sport_app">
       <ScrollToTop />
       <Layout>
         <Routes>
