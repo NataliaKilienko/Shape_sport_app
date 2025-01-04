@@ -1,14 +1,15 @@
 import React, { useEffect, useRef, useMemo } from 'react';
-import video1 from '../../assets/video/video_1.mp4';
-import video2 from '../../assets/video/video_2.mp4';
-import video3 from '../../assets/video/video_3.mp4';
-import video4 from '../../assets/video/video_4.mp4';
 
 const VideoBackground: React.FC = () => {
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const currentVideoIndex = useRef<number>(0);
 
-  const videos = useMemo(() => [video1, video2, video3, video4], []);
+  const videos = useMemo(() => [
+    `${process.env.PUBLIC_URL}/assets/video/video_1.mp4`,
+    `${process.env.PUBLIC_URL}/assets/video/video_2.mp4`,
+    `${process.env.PUBLIC_URL}/assets/video/video_3.mp4`,
+    `${process.env.PUBLIC_URL}/assets/video/video_4.mp4`,
+  ], []);
 
   useEffect(() => {
     const videoElement = videoRef.current;
