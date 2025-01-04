@@ -1,17 +1,13 @@
 {
   "files": {
     "main.css": "/Shape_sport_app/static/css/main.7f9f380b.css",
-    "main.js": "/Shape_sport_app/static/js/main.92dcb488.js",
-    "static/media/video_4.mp4": "/Shape_sport_app/static/media/video_4.45bc67711e66bb6d249d.mp4",
-    "static/media/video_2.mp4": "/Shape_sport_app/static/media/video_2.054561f47c46857673f0.mp4",
-    "static/media/video_1.mp4": "/Shape_sport_app/static/media/video_1.f7cfb4c95cba15b336bf.mp4",
-    "static/media/video_3.mp4": "/Shape_sport_app/static/media/video_3.e93de4e09a0863b5c0e2.mp4",
+    "main.js": "/Shape_sport_app/static/js/main.83e56c3a.js",
     "index.html": "/Shape_sport_app/index.html",
     "main.7f9f380b.css.map": "/Shape_sport_app/static/css/main.7f9f380b.css.map",
-    "main.92dcb488.js.map": "/Shape_sport_app/static/js/main.92dcb488.js.map"
+    "main.83e56c3a.js.map": "/Shape_sport_app/static/js/main.83e56c3a.js.map"
   },
   "entrypoints": [
     "static/css/main.7f9f380b.css",
-    "static/js/main.92dcb488.js"
+    "static/js/main.83e56c3a.js"
   ]
 }
