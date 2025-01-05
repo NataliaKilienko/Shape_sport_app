@@ -50,14 +50,10 @@ src/assets/tmp/
 *.tmp
 *.temp
 
-# Image and video files in the root directory
-*.png
-*.jpg
-*.jpeg
-*.gif
-*.svg
-*.mp4
-*.webm
+# Do not ignore `public` folder
+!/public/
+!/public/*.png
+!/public/*.mp4
 
 # Confidential files and keys
 firebase.json
