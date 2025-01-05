@@ -21,11 +21,6 @@ pnpm-debug.log*
 *.sublime-project
 *.sublime-workspace
 
-# System files
-.DS_Store              # macOS system file
-Thumbs.db              # Windows system file
-ehthumbs.db            # Windows thumbnail cache
-
 # Environment configuration files
 .env
 .env.local
@@ -49,11 +44,6 @@ ehthumbs.db            # Windows thumbnail cache
 src/assets/tmp/
 *.tmp
 *.temp
-
-# Do not ignore `public` folder
-!/public/
-!/public/*.png
-!/public/*.mp4
 
 # Confidential files and keys
 firebase.json

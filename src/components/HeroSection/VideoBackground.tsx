@@ -5,10 +5,10 @@ const VideoBackground: React.FC = () => {
   const currentVideoIndex = useRef<number>(0);
 
   const videos = useMemo(() => [
-    `${process.env.PUBLIC_URL}/assets/video/video_1.mp4`,
-    `${process.env.PUBLIC_URL}/assets/video/video_2.mp4`,
-    `${process.env.PUBLIC_URL}/assets/video/video_3.mp4`,
-    `${process.env.PUBLIC_URL}/assets/video/video_4.mp4`,
+    `Shape_sport_app/assets/video/video_1.mp4`,
+    // `${process.env.PUBLIC_URL}/assets/video/video_2.mp4`,
+    // `${process.env.PUBLIC_URL}/assets/video/video_3.mp4`,
+    // `${process.env.PUBLIC_URL}/assets/video/video_4.mp4`,
   ], []);
 
   useEffect(() => {
