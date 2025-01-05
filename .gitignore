@@ -40,15 +40,5 @@ pnpm-debug.log*
 # TypeScript build info
 *.tsbuildinfo
 
-# Temporary assets (images, videos, etc.)
-src/assets/tmp/
-*.tmp
-*.temp
-
-# Confidential files and keys
-firebase.json
-firestore.indexes.json
-firestore.rules
-
 # macOS specific files
 *.DS_Store
