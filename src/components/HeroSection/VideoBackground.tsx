@@ -1,15 +1,8 @@
-import React, { useEffect, useRef, useMemo } from 'react';
+import React, { useEffect, useRef } from 'react';
+import video1 from '../../assets/video/video_1.mp4'; 
 
 const VideoBackground: React.FC = () => {
   const videoRef = useRef<HTMLVideoElement | null>(null);
-  const currentVideoIndex = useRef<number>(0);
-
-  const videos = useMemo(() => [
-    `Shape_sport_app/assets/video/video_1.mp4`,
-    // `${process.env.PUBLIC_URL}/assets/video/video_2.mp4`,
-    // `${process.env.PUBLIC_URL}/assets/video/video_3.mp4`,
-    // `${process.env.PUBLIC_URL}/assets/video/video_4.mp4`,
-  ], []);
 
   useEffect(() => {
     const videoElement = videoRef.current;
@@ -17,7 +10,7 @@ const VideoBackground: React.FC = () => {
     if (videoElement) {
       const playVideo = async () => {
         try {
-          videoElement.src = videos[currentVideoIndex.current];
+          videoElement.src = video1; 
           videoElement.load();
           await videoElement.play();
         } catch (error) {
@@ -26,26 +19,15 @@ const VideoBackground: React.FC = () => {
       };
 
       playVideo();
-
-      const handleVideoEnd = () => {
-        currentVideoIndex.current = (currentVideoIndex.current + 1) % videos.length;
-        playVideo();
-      };
-
-      videoElement.addEventListener('ended', handleVideoEnd);
-
-      return () => {
-        videoElement.removeEventListener('ended', handleVideoEnd);
-      };
     }
-  }, [videos]);
+  }, []);
 
   return (
     <video
       ref={videoRef}
       autoPlay
       muted
-      loop={false}
+      loop
       playsInline
       style={{
         position: 'absolute',
