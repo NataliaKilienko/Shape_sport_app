@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/Shape_sport_app/static/css/main.7f9f380b.css",
-    "main.js": "/Shape_sport_app/static/js/main.211fe346.js",
+    "main.js": "/Shape_sport_app/static/js/main.5cac2727.js",
     "index.html": "/Shape_sport_app/index.html",
     "main.7f9f380b.css.map": "/Shape_sport_app/static/css/main.7f9f380b.css.map",
-    "main.211fe346.js.map": "/Shape_sport_app/static/js/main.211fe346.js.map"
+    "main.5cac2727.js.map": "/Shape_sport_app/static/js/main.5cac2727.js.map"
   },
   "entrypoints": [
     "static/css/main.7f9f380b.css",
-    "static/js/main.211fe346.js"
+    "static/js/main.5cac2727.js"
   ]
 }
