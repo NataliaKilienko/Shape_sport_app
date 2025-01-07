@@ -1,5 +1,4 @@
 import React from 'react';
-import backgroundImage from '../../assets/images/bg.jpg'; 
 
 const ImageBackground: React.FC = () => {
   return (
@@ -10,7 +9,7 @@ const ImageBackground: React.FC = () => {
         left: '0',
         width: '100%',
         height: '100%',
-        backgroundImage: `url(${backgroundImage})`, 
+        backgroundImage: `url(/Shape_sport_app/bg.jpg)`, 
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         zIndex: -1,
